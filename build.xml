@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<project name="Lookup" default="Lookup" basedir="./">
+
+
+    <property name="src.dir" value="${basedir}/WEB-INF/src"/>
+    <property name="classes.dir" value="${basedir}/WEB-INF/classes"/>
+    <property name="lib.dir" value="${basedir}/WEB-INF/lib"/>
+
+    <target name="compile">
+        <mkdir dir="${classes.dir}"/>
+        <javac srcdir="${src.dir}"
+            destdir="${classes.dir}"
+            debug="on"
+            deprecation="off"
+            nowarn="on"
+            optimize="off">
+             <classpath>
+                 <fileset dir="${lib.dir}">
+                   <include name="*.jar"/>
+                 </fileset>
+            </classpath>
+        </javac>
+    </target>
+
+	<target name="Lookup" depends="compile">
+		<copy file="${src.dir}/struts.xml" todir="${classes.dir}/"/>
+	</target>
+
+    <target  name="all" depends="Lookup">
+    </target>
+</project>

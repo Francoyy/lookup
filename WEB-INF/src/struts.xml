@@ -1,0 +1,33 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="lookup" namespace="/" extends="struts-default">
+        <action name="login" class="Login.LoginAction">
+            <result name="SUCCESS">/lookup.jsp</result>
+        </action>
+        <action name="lookupWordAction" class="LookupWord.LookupWordAction">
+            <result name="SUCCESS">/lookup.jsp</result>
+            <result name="FAILURE">/login.jsp</result>
+        </action>
+        <action name="listWordsAction" class="ListWords.ListWordsAction">
+            <result name="SUCCESS">/listWords.jsp</result>
+        </action>
+        <action name="train" class="Train.TrainAction">
+            <result name="SUCCESS">/train.jsp</result>
+        </action>
+        <action name="edit" class="Edit.EditAction">
+            <result name="SUCCESS">/edit.jsp</result>
+        </action>
+        <action name="print" class="Print.PrintAction">
+            <result name="SUCCESS">/print.jsp</result>
+        </action>
+        <action name="logout" class="Login.LogoutAction">
+            <result name="SUCCESS">/login.jsp</result>
+        </action>
+        <action name="signup" class="Login.SignupAction">
+            <result name="SUCCESS">/signup.jsp</result>
+        </action>
+    </package>
+</struts>

@@ -1,0 +1,2 @@
+CREATE TABLE "users" ("login" "text", "password" "text", "defaultInputL" "text", "defaultOutputL" "text");
+CREATE TABLE "lookups" ("login" "text","inputLanguage" "text","outputLanguage" "text","input" "text","output" "text","note" "text","date" "text");

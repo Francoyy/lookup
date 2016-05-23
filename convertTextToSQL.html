@@ -1,0 +1,17 @@
+<html>
+<script type="text/javascript">
+	function generateSQL() {
+		var tab = document.getElementById("values").value;
+		tab = tab.replace(/login=/g, "');<br/>INSERT INTO lookups VALUES('");
+		tab = tab.replace(/&inputLanguage=/g, "', '");
+		tab = tab.replace(/&outputLanguage=/g, "', '");
+		tab = tab.replace(/&input=/g, "', '");
+		tab = tab.replace(/&output=/g, "', '");
+		tab = tab.replace(/&date=/g, "', '', '");
+		document.getElementById("result").innerHTML = tab;
+	}
+</script>
+<input type="text" value="" id="values"/><input type="button" value="generate" onclick="generateSQL()"/>
+<div id="result">
+</div>
+</html>
